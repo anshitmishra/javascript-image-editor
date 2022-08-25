@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Editor</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+        </script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <h1>Graphics Editor</h1>
+        <div class="mainContainerHolder">
+            <div class="left">
+                <div class="filterContainer">
+                    <h2>Filters</h2>
+                    <div class="filterButtonContainer">
+                        <button class="filterButtonActive" data="1">Brightness</button>
+                        <button class="filterButton" data="2">Saturation</button>
+                        <button class="filterButton" data="3">Inverstion</button>
+                        <button class="filterButton" data="4">Grayscale</button>
+                    </div>
+                    <div class="slidersContainer">
+                        <div class="sliderItem" id="sliderItem1">
+                            <label for="brightness">Brightness</label>
+                            <span id="brightnessPer">100%</span>
+                            <input type="range" id="brightness" value="100" min="0" max="200">
+                        </div>
+                        <div class="sliderItemHide" id="sliderItem2">
+                            <label for="Saturation">Saturation</label>
+                            <span id="SaturationPer">0%</span>
+                            <input type="range" id="Saturation" value="100" min="0" max="200">
+                        </div>
+                        <div class="sliderItemHide" id="sliderItem3">
+                            <label for="Inverstion">Inverstion</label>
+                            <span id="InverstionPer">0%</span>
+                            <input type="range" id="Inverstion" value="0" min="0" max="100">
+                        </div>
+                        <div class="sliderItemHide" id="sliderItem4">
+                            <label for="Grayscale">Grayscale</label>
+                            <span id="GrayscalePer">0%</span>
+                            <input type="range" id="Grayscale" value="0" min="0" max="100">
+                        </div>
+                    </div>
+                    <div class="rotateFlip">
+                        <h2>Rotate & Flip</h2>
+                        <div class="rotateFlipItem" id="rotateleft" style="z-index: 99;">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </div>
+                        <div class="rotateFlipItem" id="rotateright" style="z-index: 99;">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                        <div class="rotateFlipItem" id="imageObjectfit">
+                            <i class="fa-solid fa-image"></i>
+                        </div> 
+                    </div>
+                </div>
+                <div class="leftButton">
+                    reset filter
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightImageContainer">
+                    <img id="image">
+                </div>
+                <div class="RightButton">
+                    <div class="RightButtonItem">
+                        <input type="file" id="imgInp"  accept="image/*"/>
+                        <button>choose file</button>
+                    </div>
+                    <div class="RightButtonItem" style="background-color:#4f70e6 ;color:white;">
+                        <button style="color: white;" id="save">save</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
